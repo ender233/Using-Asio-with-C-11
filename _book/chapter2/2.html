@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.2 链式异步操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.html" />
+    
+    
+    <link rel="prev" href="1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../chapter1/1.html">
+            
+                <a href="../chapter1/1.html">
+            
+                    
+                    1.1 c++11版本的asio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../chapter1/2.html">
+            
+                <a href="../chapter1/2.html">
+            
+                    
+                    1.2 使用IO流给出一个简单的例子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../chapter1/3.html">
+            
+                <a href="../chapter1/3.html">
+            
+                    
+                    1.3 理解同步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    2.1 理解异步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.2 链式异步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    2.3 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    2.4 管理对象的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    2.5 优化内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    2.6 并发处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    2.7 Passing the buck: 实现高效抽象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    2.8 规格和扩展性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.2 链式异步操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="21-&#x94FE;&#x5F0F;&#x5F02;&#x6B65;&#x8C03;&#x7528;">2.1 &#x94FE;&#x5F0F;&#x5F02;&#x6B65;&#x8C03;&#x7528;</h3>
+<p>&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x88AB;&#x770B;&#x505A;&#x662F;&#x4E00;&#x4E2A;&#x672A;&#x5B8C;&#x6210;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x76F4;&#x5230;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5B8C;&#x6210;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;. &#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x88AB;&#x5FAA;&#x73AF;&#x8C03;&#x7528;&#x4EE5;&#x521B;&#x5EFA;&#x66F4;&#x591A;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;.
+&#x8003;&#x8651;&#x5728;&#x4E00;&#x4E2A;socket&#x4E0A;&#xFF0C;&#x8FDE;&#x63A5;&#x5B8C;&#x6210;&#x540E;&#x53C8;&#x8FDB;&#x884C;&#x4E86;&#x5176;&#x4ED6;&#x7684;I/O&#x64CD;&#x4F5C;:</p>
+<pre><code>Consider the case where a connect is followed by other I/O operations on the socket:
+socket.async_connect(
+    server_endpoint,
+    [&amp;](std::error_code ec)
+    {
+      if (!ec)
+      {
+        socket.async_read_some(
+            asio::buffer(data),
+            [&amp;](std::error_code ec, std::size_t length)
+            {
+              if (!ec)
+              {
+                async_write(socket,
+                    asio::buffer(data, length),
+                    [&amp;](std::error_code ec, std::size_t length)
+                    {
+                      // ...
+                    });
+              }
+            });
+      }
+    });
+</code></pre><p>&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x8FDE;&#x63A5;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x7528;c++11 lambda&#x6765;&#x8868;&#x793A;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x8BFB;&#x64CD;&#x4F5C;. &#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53C8;&#x7ED1;&#x5B9A;&#x4E86;&#x5176;&#x4ED6;&#x7684;&#x5DE5;&#x4F5C;(&#x5F02;&#x6B65;&#x7684;&#x5199;&#x64CD;&#x4F5C;)&#xFF0C;&#x56E0;&#x6B64;<code>io_service::run()</code>&#x5728;&#x6240;&#x6709;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7ED3;&#x675F;&#x540E;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;.
+&#x5728;&#x5B9E;&#x9645;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E00;&#x7CFB;&#x5217;&#x8C03;&#x7528;&#x901A;&#x5E38;&#x4F1A;&#x66F4;&#x957F;&#x5E76;&#x4E14;&#x4F1A;&#x5305;&#x542B;&#x5FAA;&#x73AF;&#x548C;&#x5206;&#x652F;.&#x8FD9;&#x65F6;&#x5019;&#xFF0C;<code>io_service::run()</code>&#x6267;&#x884C;&#x72B6;&#x6001;&#x5C31;&#x4E0D;&#x786E;&#x5B9A;&#x4E86;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.html" class="navigation navigation-prev " aria-label="Previous page: 2.1 理解异步操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.html" class="navigation navigation-next " aria-label="Next page: 2.3 错误处理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.2 链式异步操作","level":"1.1.5","depth":2,"next":{"title":"2.3 错误处理","level":"1.1.6","depth":2,"path":"chapter2/3.md","ref":"chapter2/3.md","articles":[]},"previous":{"title":"2.1 理解异步操作","level":"1.1.4","depth":2,"path":"chapter2/1.md","ref":"chapter2/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/2.md","mtime":"2017-08-20T11:58:38.246Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-20T13:39:56.081Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

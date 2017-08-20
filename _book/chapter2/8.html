@@ -1,0 +1,392 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.8 规格和扩展性 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="7.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../chapter1/1.html">
+            
+                <a href="../chapter1/1.html">
+            
+                    
+                    1.1 c++11版本的asio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../chapter1/2.html">
+            
+                <a href="../chapter1/2.html">
+            
+                    
+                    1.2 使用IO流给出一个简单的例子
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../chapter1/3.html">
+            
+                <a href="../chapter1/3.html">
+            
+                    
+                    1.3 理解同步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    2.1 理解异步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2.2 链式异步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    2.3 错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    2.4 管理对象的生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    2.5 优化内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    2.6 并发处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    2.7 Passing the buck: 实现高效抽象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.11" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    2.8 规格和扩展性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.8 规格和扩展性</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="28-&#x89C4;&#x683C;&#x548C;&#x6269;&#x5C55;&#x6027;">2.8 &#x89C4;&#x683C;&#x548C;&#x6269;&#x5C55;&#x6027;</h3>
+<p>&#x57FA;&#x4E8E;Asio&#x5E93;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5728;WG21&#x63D0;&#x6848;&#x4E2D;asio&#x9650;&#x5B9A;&#x4E86;&#x6700;&#x5C0F;&#x7684;&#x529F;&#x80FD;&#x5B50;&#x96C6;&#xFF0C;&#x5C31;&#x662F;&#x9488;&#x5BF9;TCP/UDP&#xFF0C;buffers&#x548C;&#x5B9A;&#x65F6;&#x5668;&#x7684;&#x57FA;&#x672C;&#x7F51;&#x7EDC;&#x529F;&#x80FD;. &#x7136;&#x800C;Asio&#x8BBE;&#x8BA1;&#x6210;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x4E00;&#x7CFB;&#x5217;&#x673A;&#x5236;&#x5BF9;&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x5B9A;&#x5236;.&#x8FD9;&#x4E9B;&#x673A;&#x5236;&#x5982;&#x4E0B;&#x6240;&#x793A;:</p>
+<p><strong>&#x65B0;&#x589E;I/O&#x670D;&#x52A1;</strong>
+<code>io_service</code>&#x7C7B;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x53EF;&#x6269;&#x5C55;,&#x7C7B;&#x578B;&#x5B89;&#x5168;,&#x8303;&#x5316;&#x7684;I/O&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x7528;&#x7C7B;&#x578B;&#x505A;&#x533A;&#x5206;.&#x3000;I/O&#x670D;&#x52A1;&#x7528;&#x6765;&#x7BA1;&#x7406;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x903B;&#x8F91;&#x63A5;&#x53E3;&#x4F9B;I/O&#x5BF9;&#x8C61;&#x4F7F;&#x7528;.&#x7279;&#x522B;&#x662F;&#x591A;&#x4E2A;I/O&#x5BF9;&#x8C61;&#x5171;&#x4EAB;&#x540C;&#x6837;&#x7684;&#x8D44;&#x6E90;&#x7684;&#x65F6;&#x5019;. &#x4F8B;&#x5982;,&#x5B9A;&#x65F6;&#x5668;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5355;&#x72EC;&#x7684;&#x5B9A;&#x65F6;&#x961F;&#x5217;. I/O&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x7740;&#x8FD9;&#x4E9B;&#x5171;&#x4EAB;&#x8D44;&#x6E90;, &#x8FD9;&#x6837;&#x4ED6;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x6CA1;&#x6709;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x6D88;&#x8017;&#x8D44;&#x6E90;.
+Asio&#x589E;&#x52A0;&#x4E86;I/O&#x670D;&#x52A1;&#x7528;&#x6765;&#x4ECB;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x529F;&#x80FD;&#xFF0C;&#x5305;&#x62EC;:</p>
+<ul>
+<li>&#x5728;<code>Handles</code>&#x4E0A;&#x5B9E;&#x73B0;windows&#x670D;&#x52A1;&#x7684;I/O&#x590D;&#x7528;</li>
+<li>&#x4E00;&#x4E2A;windows&#x670D;&#x52A1;&#xFF0C;&#x7528;&#x4E8E;&#x7B49;&#x5F85;&#x5185;&#x6838;&#x5BF9;&#x8C61;(&#x4F8B;&#x5982;&#x4E8B;&#x4EF6;/&#x8FDB;&#x7A0B;&#x548C;&#x7EBF;&#x7A0B;)</li>
+<li>&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x6D41;&#x5BF9;&#x8C61;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x7684;Posix&#x63A5;&#x53E3;&#x670D;&#x52A1;.</li>
+<li>&#x901A;&#x8FC7;<code>signal()</code>&#x6216;&#x8005;&#x662F;Posix&#x7684;<code>sigaction()</code>&#x5B9E;&#x73B0;&#x7684;&#x4FE1;&#x53F7;&#x5904;&#x7406;&#x670D;&#x52A1;</li>
+</ul>
+<p>&#x65B0;&#x7684;I/O&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x5F71;&#x54CD;&#x73B0;&#x6709;&#x5E93;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x88AB;&#x52A0;&#x5165;.</p>
+<p><strong>Socket&#x7C7B;&#x578B;&#x89C4;&#x8303;</strong>
+&#x867D;&#x7136;Asio&#x63D0;&#x6848;&#x9650;&#x5B9A;&#x4E86;&#x53EA;&#x652F;&#x6301;<code>TCP</code>&#x548C;<code>UDP</code>&#x7684;sockets, &#x4F46;&#x662F;&#x63A5;&#x53E3;&#x662F;&#x56F4;&#x7ED5;&#x8FD9;&#x7C7B;&#x578B;&#x89C4;&#x8303;&#x7684;, &#x6BD4;&#x5982;&#x534F;&#x8BAE;&#x548C;&#x7AEF;&#x70B9;, &#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x9700;&#x6C42;&#x88AB;&#x7528;&#x6765;&#x548C;&#x5176;&#x4ED6;sockets&#x7C7B;&#x578B;&#x534F;&#x540C;&#x5DE5;&#x4F5C;&#x7684;. Asio&#x672C;&#x8EAB;&#x4E5F;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x89C4;&#x8303;&#x6765;&#x652F;&#x6301;<code>ICMP</code>&#x548C;<code>UNIX</code>&#x7684;sockets.</p>
+<p><strong>Stream&#x7C7B;&#x578B;&#x89C4;&#x8303;</strong>
+Asio&#x5E93;&#x5B9A;&#x4E49;&#x4E86;&#x51E0;&#x79CD;&#x540C;&#x6B65;/&#x5F02;&#x6B65;&#x7684;&#x6D41;I/O&#x7C7B;&#x578B;.&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x7531;TCP socket&#x63A5;&#x53E3;&#x6765;&#x4F7F;&#x7528;&#xFF0C;&#x62BD;&#x8C61;&#x6210;<code>ssl::stream&lt;&gt;</code>&#x548C;<code>buffered_stream&lt;&gt;</code>, &#x901A;&#x5E38;&#x4F7F;&#x7528;<code>async_read()</code>,<code>async_read_util()</code>&#x548C;<code>async_write()</code>&#x6765;&#x5E94;&#x7528;&#x8FD9;&#x51E0;&#x4E2A;&#x6D41;&#x5BF9;&#x8C61;. &#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x89C4;&#x8303;&#x540C;&#x4E8B;&#x4E5F;&#x88AB;&#x7528;&#x6765;&#x5BF9;&#x62BD;&#x8C61;&#x4E0A;&#x5C42;&#x5E94;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#x62BD;&#x8C61;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;<code>HTTP</code>&#x7684;&#x5F02;&#x6B65;&#x5305;&#x88C5;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="7.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2.7 Passing the buck: 实现高效抽象">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.8 规格和扩展性","level":"1.1.11","depth":2,"previous":{"title":"2.7 Passing the buck: 实现高效抽象","level":"1.1.10","depth":2,"path":"chapter2/7.md","ref":"chapter2/7.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/8.md","mtime":"2017-08-20T13:47:16.291Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-20T13:39:56.081Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
